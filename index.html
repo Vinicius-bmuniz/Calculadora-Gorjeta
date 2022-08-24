@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Calculadora de Gorjeta</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div>
+          <h1 class="title">Calculadora de Gorjetas</h1>
+        </div>
+
+        <div>
+          <form action="" class="form" id="formId">
+            <label for="bill">
+              <p>Valor da conta:</p>
+            </label>
+
+            <p>
+              R$:
+              <input
+                type="number"
+                name="bill"
+                id="bill"
+                min="0"
+                class="formInput"
+                placeholder="100,00"
+                step="0.01"
+                required
+              />
+            </p>
+
+            <label for="service">
+              <p>Como foi o serviço?</p>
+            </label>
+            <p>
+              <select name="service" id="service" class="formSelect" required>
+                <option value="" selected disabled>Escolha uma opção:</option>
+                <option value="0.00">Sem Gorjeta</option>
+                <option value="0.05">05% - Ok</option>
+                <option value="0.10">10% - Bom</option>
+                <option value="0.20">20% - Muito bom</option>
+                <option value="0.30">30% - Incrível</option>
+              </select>
+            </p>
+
+            <label for="peopleNumber">
+              <p>Quantas pessoas vão dividir a conta?</p>
+            </label>
+            <p>
+              <input
+                type="number"
+                name="peopleNumber"
+                id="peopleNumber"
+                min="0"
+                class="formInput"
+                placeholder="3"
+                required
+              />
+            </p>
+
+            <button onsubmit="calculateTip()" type="submit" class="button">
+              Calcular
+            </button>
+          </form>
+        </div>
+
+        <div id="result" class="result">
+          <p id="eachTip">Cada: R$ <span><strong id="each"></strong></span></p>
+          <p id="showTotalTip">Gorjeta Total R$ <span><strong id="totalTip"></strong></span></p>
+          <p id="noTip"><span><strong>Sem Gorjetas!!</strong></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+:root {
+  --bg-color: #BFBFBF;
+  --primary-color: #B8D9D1;
+  --secondary-color: #8AA6A3;
+  --tertiary-color: #127369;
+  --quartiary-color: #10403B;
+  --green-color: rgb(9, 202, 154);
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 60vw;
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--secondary-color);
+  box-shadow: 4px 5px 50px 25px rgba(15, 15, 15, 0.2);
+  border-radius: 25px;
+}
+
+
+.card label, p{
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 12px 5px;
+}
+
+.title {
+  background-color: var(--tertiary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.form {
+  padding: 20px 40px;
+}
+
+.formInput {
+  width: 55px;
+  height: 20px;
+  border-radius: 15px;
+  border: 2px solid var(--secondary-color);
+  padding: 5px 5px 5px 16px;
+}
+
+.formSelect {
+  height: 35px;
+  width: 180px;
+  border-radius: 15px;
+  border: 2px solid var(--secondary-color);
+  padding: 5px 10px;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  border: 2px solid var(--quartiary-color);
+  outline: none;
+}
+
+.button {
+  background-color: var(--tertiary-color);
+  border: var(--tertiary-color);
+  border-radius: 20px;
+  color: white;
+  padding: 10px 35px;
+  margin-top: 15px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background-color: var(--quartiary-color);
+  box-shadow: 3px 2px 20px 8px rgba(71, 70, 70, 0.15);
+}
+
+.result {
+  display: block;
+  align-items: center;
+  width: 70%;
+
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  background-color: var(--tertiary-color);
+  border-radius: 20px;
+  box-shadow: 3px 2px 20px 8px rgba(71, 70, 70, 0.15);
+  padding: 15px;
+  text-align: center;
+  color: #ffff;
+}
+
+.result p {
+  margin: 5px 10px;
+}
